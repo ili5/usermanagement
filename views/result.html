@@ -1,0 +1,26 @@
+{% extends "layouts/layout.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1>Welcome {{ user.name }}</h1>
+    <h2>Search User</h2>
+    <form class="form" action="search" method="get">
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="Search for..." name="search" id="search">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">Search!</button>
+            </span>
+        </div>
+    </form>
+</div>
+<div class="jumbotron">
+    <h2>Result</h2>
+    <ul>
+        {% for user in result %}
+            <li>{{ user.name }}</li>
+        {% endfor %}
+    </ul>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layouts/layout.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h2>Login</h2>
+    {% if errorMsg is defined %}
+    <div class="alert alert-danger">
+        Wrong credentials.
+    </div>
+    {% endif %}
+    <form method="POST" action="/loginSubmit">
+        <div class="form-group {% if errors['email'] is defined %} has-error {% endif %}">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="{% if oldInput['email'] is defined %}{{ oldInput['email'] }}{% endif %}">
+        </div>
+        <div class="form-group {% if errors['password'] is defined %} has-error {% endif %}">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password"  value="{% if oldInput['password'] is defined %}{{ oldInput['password'] }}{% endif %}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+{% endblock %}

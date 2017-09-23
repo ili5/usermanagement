@@ -1,0 +1,30 @@
+{% extends "layouts/layout.html" %}
+
+{% block content %}
+
+{% if user != false %}
+<div class="jumbotron">
+    <h1>Welcome {{ user.name }}</h1>
+    <h2>Search User</h2>
+    <form class="form" action="search" method="get">
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="Search for..." name="search" id="search">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">Search!</button>
+            </span>
+        </div>
+    </form>
+</div>
+{% else %}
+<div class="jumbotron">
+    <h1>User Management Script</h1>
+    <p>
+        This is simple user management script. You can register and login. If you are logged, you can search other users.
+    </p>
+    <p>
+        <a class="btn btn-primary btn-lg" href="/login" role="button">Login</a>
+        <a class="btn btn-primary btn-lg" href="/register" role="button">Register</a>
+    </p>
+</div>
+{% endif %}
+{% endblock %}

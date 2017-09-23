@@ -1,0 +1,12 @@
+CREATE TABLE `users` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `email` VARCHAR(64) NOT NULL , `password` VARCHAR(64) NOT NULL , `created_at` TIMESTAMP NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+INSERT INTO `users` (`name`, `email`, `password`, `created_at`) VALUES ('Normand Edgerly', 'user1@usermanagement.dev', '6ad14ba9986e3615423dfca256d04e3f', '2017-09-23 21:37:07');
+INSERT INTO `users` (`name`, `email`, `password`, `created_at`) VALUES ('Ilda Strahl', 'user2@usermanagement.dev', '6ad14ba9986e3615423dfca256d04e3f', '2017-09-23 21:37:07');
+INSERT INTO `users` (`name`, `email`, `password`, `created_at`) VALUES ('Ernest Brousseau', 'user3@usermanagement.dev', '6ad14ba9986e3615423dfca256d04e3f', '2017-09-23 21:37:07');
+INSERT INTO `users` (`name`, `email`, `password`, `created_at`) VALUES ('Dale Labrador', 'user4@usermanagement.dev', '6ad14ba9986e3615423dfca256d04e3f', '2017-09-23 21:37:07');
+INSERT INTO `users` (`name`, `email`, `password`, `created_at`) VALUES ('Olive Ferebee', 'user5@usermanagement.dev', '6ad14ba9986e3615423dfca256d04e3f', '2017-09-23 21:37:07');
+INSERT INTO `users` (`name`, `email`, `password`, `created_at`) VALUES ('Leif Work', 'user6@usermanagement.dev', '6ad14ba9986e3615423dfca256d04e3f', '2017-09-23 21:37:07');
+INSERT INTO `users` (`name`, `email`, `password`, `created_at`) VALUES ('Shasta Bischoff', 'user7@usermanagement.dev', '6ad14ba9986e3615423dfca256d04e3f', '2017-09-23 21:37:07');
+INSERT INTO `users` (`name`, `email`, `password`, `created_at`) VALUES ('Retha Crowden', 'user8@usermanagement.dev', '6ad14ba9986e3615423dfca256d04e3f', '2017-09-23 21:37:07');
+INSERT INTO `users` (`name`, `email`, `password`, `created_at`) VALUES ('Inell Snover', 'user9@usermanagement.dev', '6ad14ba9986e3615423dfca256d04e3f', '2017-09-23 21:37:07');
+INSERT INTO `users` (`name`, `email`, `password`, `created_at`) VALUES ('Spring Newhall', 'user10@usermanagement.dev', '6ad14ba9986e3615423dfca256d04e3f', '2017-09-23 21:37:07');
+INSERT INTO `users` (`name`, `email`, `password`, `created_at`) VALUES ('Retha Crowden', 'user11@usermanagement.dev', '6ad14ba9986e3615423dfca256d04e3f', '2017-09-23 21:37:07');
