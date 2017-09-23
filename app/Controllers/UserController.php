@@ -14,7 +14,6 @@ class UserController extends Controller{
         $formValidation = $validator->isValid();
 
         if(is_array($formValidation)){
-            header("Location: /login");
             return $this->render('login.html', ['errorMsg' => 'Error logging you in.', 'errors' => $formValidation, 'oldInput' => $data]);
         }
 
@@ -27,7 +26,6 @@ class UserController extends Controller{
             return $this->render('home.html');
         }
 
-        header("Location: /login");
         return $this->render('login.html', ['errorMsg' => 'Error logging you in.', 'oldInput' => $data]);
     }
 
@@ -38,7 +36,6 @@ class UserController extends Controller{
         $formValidation = $validator->isValid();
 
         if(is_array($formValidation)){
-            header("Location: /register");
             return $this->render('register.html', ['errors' => $formValidation, 'oldInput' => $data]);
         }
 
@@ -47,13 +44,11 @@ class UserController extends Controller{
         $checkUserExist = $userModel->checkIfUserExist($data['email']);
 
         if($checkUserExist){
-            header("Location: /register");
             return $this->render('register.html', ['errorMsg' => 'User exist. Please login or choose different email']);
         }
 
         $userModel->register($data);
 
-        header("Location: /register");
         return $this->render('register.html', ['success' => 'Successful registration. Please login.']);
     }
 

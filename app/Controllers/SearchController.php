@@ -7,7 +7,6 @@ class SearchController extends Controller{
 
     public function search(){
         if(!isset($_SESSION['user'])){
-            header("Location: /login");
             return $this->render('login.html', ['errorMsg' => "Please login"]);
         }
 
@@ -21,7 +20,11 @@ class SearchController extends Controller{
         foreach($result as $user){
             $users[] = $user;
         }
+        if(sizeof($users) > 0){
+            return $this->render('result.html', ['result' => $users]);
+        }else{
+            return $this->render('result.html', ['noResult' => true]);
+        }
 
-        return $this->render('result.html', ['result' => $users]);
     }
 }

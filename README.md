@@ -11,7 +11,7 @@ Installation instruction:
 
 User list: 11
 
-User emails: user1@usermanagement.dev
+User emails: user1@usermanagement.dev (from "user1@usermanagement.dev" to "user11@usermanagement.dev")
 
 Default password for all users is "user123"
 

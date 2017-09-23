@@ -14,12 +14,17 @@
     </form>
 </div>
 <div class="jumbotron">
+    {% if noResult %}
+        <h2>No result</h2>
+    {% endif %}
+    {% if result is defined %}
     <h2>Result</h2>
     <ul>
         {% for user in result %}
             <li>{{ user.name }}</li>
         {% endfor %}
     </ul>
+    {% endif %}
 
 
 </div>
