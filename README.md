@@ -4,8 +4,8 @@ User Management PHP Script
 Installation instruction:
 
   - composer install
-  - create local.php file from local.dist.php and change config
-  - set up document root to /public folder
+  - create local.php file from local.dist.php and change DB settings
+  - set up domain document root to /public folder
   - execute init.sql file into database
   
 
